@@ -8,7 +8,7 @@ El proyecto se centra en funcionalidades principales de búsqueda, registro y co
 ## Requisitos funcionales
 
 1. **Buscar libro por título (API Gutendex)**
-   - La persona usuaria ingresa el título de un libro.  
+   - El usuario ingresa el título de un libro.  
    - La aplicación consulta la API Gutendex.  
    - Si encuentra resultados: muestra título, autor (apellido primero), idioma y número de descargas.  
    - Registra el libro en la base de datos (sin duplicados).  
@@ -21,10 +21,10 @@ El proyecto se centra en funcionalidades principales de búsqueda, registro y co
    - Cada autor aparece una sola vez, incluso si tiene varios libros.
 
 4. **Listar autores vivos en un determinado año**
-   - La persona usuaria ingresa un año y se muestran los autores que estaban vivos en ese año.
+   - El usuario ingresa un año y se muestran los autores que estaban vivos en ese año.
 
 5. **Listar libros por idioma**
-   - La persona usuaria ingresa un código de idioma (EN, ES, FR, PT).  
+   - El usuario ingresa un código de idioma (EN, ES, FR, PT).  
    - Se muestran los libros de la base de datos que coinciden con el idioma.
   
 ##  Menú de la aplicación
@@ -43,11 +43,11 @@ El proyecto se centra en funcionalidades principales de búsqueda, registro y co
      
 ## Estructura 
 libros/
-- Conexion.java # Clase que gestiona la conexión con MySQL
-- Autor.java # Clase entidad Autor
-- Libro.java # Clase entidad Libro
-- LibroDAO.java # Clase que maneja las operaciones de libros en la base de datos
-- Libros.java # Clase principal con el menú de consola
+- Conexion.java --- Clase que gestiona la conexión con MySQL
+- Autor.java --- Clase entidad Autor
+- Libro.java --- Clase entidad Libro
+- LibroDAO.java --- Clase que maneja las operaciones de libros en la base de datos
+- Libros.java --- Clase principal con el menú de consola
 
 
 ## Base de datos
