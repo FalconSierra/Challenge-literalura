@@ -43,11 +43,11 @@ El proyecto se centra en funcionalidades principales de búsqueda, registro y co
      
 ## Estructura 
 libros/
-├── Conexion.java # Clase que gestiona la conexión con MySQL
-├── Autor.java # Clase entidad Autor
-├── Libro.java # Clase entidad Libro
-├── LibroDAO.java # Clase que maneja las operaciones de libros en la base de datos
-├── Libros.java # Clase principal con el menú de consola
+- Conexion.java # Clase que gestiona la conexión con MySQL
+- Autor.java # Clase entidad Autor
+- Libro.java # Clase entidad Libro
+- LibroDAO.java # Clase que maneja las operaciones de libros en la base de datos
+- Libros.java # Clase principal con el menú de consola
 
 
 ## Base de datos
@@ -63,5 +63,5 @@ Integra un archivo llamado "Base de datos. txt" con las tablas principales
 4. Configurar `Conexion.java` con tu usuario/contraseña de MySQL.  
 5. Ejecutar la clase `Libros.java` para iniciar la aplicación de consola.  
 
-## 🏗️ Estructura del proyecto
+
 
