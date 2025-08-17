@@ -1,0 +1,58 @@
+----------------------------------------------------------------------------------
+1. Crear la base de datos 
+
+CREATE DATABASE literalura;
+----------------------------------------------------------------------------------
+2. Usar la base de datos
+
+USE literalura;
+----------------------------------------------------------------------------------
+3.Crear las tablas
+
+CREATE TABLE autor (
+    id_autor INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    fecha_nacimiento INT,
+    fecha_fallecimiento INT
+);
+
+CREATE TABLE libro (
+    id_libro INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL UNIQUE,
+    idioma VARCHAR(5) NOT NULL,
+    numero_descargas INT DEFAULT 0,
+    id_autor INT NOT NULL,
+    FOREIGN KEY (id_autor) REFERENCES autor(id_autor)
+);
+
+----------------------------------------------------------------------------------
+4. Insertar datos
+INSERT INTO autor (nombre, apellido, fecha_nacimiento, fecha_fallecimiento)
+VALUES
+('Miguel', 'de Cervantes', 1547, 1616),
+('William', 'Shakespeare', 1564, 1616),
+('Jane', 'Austen', 1775, 1817),
+('Charles', 'Dickens', 1812, 1870),
+('Gabriel', 'García Márquez', 1927, 2014);
+
+INSERT INTO libro (titulo, idioma, numero_descargas, id_autor)
+VALUES
+('Don Quijote de la Mancha', 'ES', 25000, 1),
+('La Galatea', 'ES', 8000, 1),
+('Hamlet', 'EN', 22000, 2),
+('Romeo and Juliet', 'EN', 27000, 2),
+('Pride and Prejudice', 'EN', 30000, 3),
+('Sense and Sensibility', 'EN', 15000, 3),
+('A Tale of Two Cities', 'EN', 20000, 4),
+('Oliver Twist', 'EN', 18000, 4),
+('Cien años de soledad', 'ES', 35000, 5),
+('El amor en los tiempos del cólera', 'ES', 28000, 5);
+----------------------------------------------------------------------------------
+5. Ver los datos de la tabla 
+
+SELECT * FROM autor;
+SELECT * FROM libro;
+----------------------------------------------------------------------------------
+
+
